@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon VA Portfolio - Private Label Specialist</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background-color: #232f3e;
+            padding: 15px 0;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #ff9900 !important;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            color: #ffffff !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #232f3e, #ff9900);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            color: #232f3e;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: #ff9900;
+            margin-bottom: 15px;
+        }
+
+        .about-section,
+        .services-section,
+        .contact-section {
+            padding: 80px 0;
+        }
+
+        .contact-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background-color: #ff9900;
+            border-color: #ff9900;
+            font-weight: 600;
+            padding: 12px 30px;
+        }
+
+        .btn-primary:hover {
+            background-color: #e68a00;
+            border-color: #e68a00;
+        }
+
+        footer {
+            background-color: #232f3e;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff9900;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff9900;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background-color 0.3s;
+            z-index: 1000;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            background-color: #20b354;
+        }
+
+        .whatsapp-button i {
+            font-size: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .service-card {
+                padding: 20px;
+            }
+
+            .whatsapp-button {
+                width: 50px;
+                height: 50px;
+            }
+
+            .whatsapp-button i {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ammad Amin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">Your Amazon Private Label Success Partner</h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s">Maximize your Amazon sales with expert
+                product research, listing optimization, PPC campaigns, and seamless inventory management.</p>
+            <a href="#contact"
+                class="btn btn-primary btn-lg mt-4 animate__animated animate__pulse animate__infinite">Hire Me Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title animate__animated animate__fadeIn">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 animate__animated animate__fadeInLeft">
+                    <p>I’m a seasoned Amazon Virtual Assistant specializing in Private Label, with expertise in every
+                        aspect of launching and scaling Amazon businesses. From keyword research to PPC optimization, I
+                        deliver data-driven solutions to help sellers achieve 25%+ profit margins.</p>
+                    <p>Using tools like Helium 10, I provide end-to-end services, including product sourcing, freight
+                        forwarding, listing creation, and inventory management. My mission is to simplify your Amazon
+                        journey and drive measurable results.</p>
+                </div>
+                <div class="col-md-6 animate__animated animate__fadeInRight">
+                    <div class="card p-4">
+                        <h4>Key Expertise</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Amazon
+                                Private Label Strategy</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Helium 10
+                                Tools (Magnet, Cerebro, Scribbles)</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Alibaba
+                                Sourcing & Negotiation</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Shipment
+                                Plan & Freight Forwarding</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Listing Creation & Optimization</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Listing Uploading via Bulk File</li>
+                                
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> PPC
+                                Campaign Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section bg-light">
+        <div class="container">
+            <h2 class="section-title animate__animated animate__fadeIn">My Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-card text-center animate__animated animate__zoomIn">
+                        <i class="fas fa-search"></i>
+                        <h3>Keyword Research</h3>
+                        <p>Identify high-volume, relevant keywords using Magnet and Cerebro to boost product visibility
+                            and rankings.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center animate__animated animate__zoomIn"
+                        style="animation-delay: 0.2s;">
+                        <i class="fas fa-box-open"></i>
+                        <h3>Product Research</h3>
+                        <p>Find profitable products with Magnet, Best Seller, and Black Box methods, adhering to strict
+                            criteria ($25–$60, <500 reviews).</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center animate__animated animate__zoomIn"
+                        style="animation-delay: 0.4s;">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Market Analysis</h3>
+                        <p>Conduct in-depth competitor analysis, pricing, and variation breakdowns to optimize product
+                            launches.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center animate__animated animate__zoomIn"
+                        style="animation-delay: 0.6s;">
+                        <i class="fas fa-warehouse"></i>
+                        <h3>Product Sourcing</h3>
+                        <p>Source quality products from verified Alibaba suppliers, ensuring trade assurance and 25%+
+                            margins.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center animate__animated animate__zoomIn"
+                        style="animation-delay: 0.8s;">
+                        <i class="fas fa-truck"></i>
+                        <h3>Freight Fetching</h3>
+                        <p>Manage shipping logistics with freight forwarders, calculating CBM, volumetric weight, and
+                            carton labels.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center animate__animated animate__zoomIn"
+                        style="animation-delay: 1s;">
+                        <i class="fas fa-list-alt"></i>
+                        <h3>Listing Creation</h3>
+                        <p>Create optimized listings with titles, bullet points, descriptions, EBC, and backend search
+                            terms using Scribbles and Frankenstein.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center animate__animated animate__zoomIn"
+                        style="animation-delay: 1.2s;">
+                        <i class="fas fa-ad"></i>
+                        <h3>PPC Optimization</h3>
+                        <p>Run targeted PPC campaigns (Sponsored Product, Brand, Display) during the Honeymoon Period to
+                            maximize organic rankings.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center animate__animated animate__zoomIn"
+                        style="animation-delay: 1.4s;">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3>Shipment Plans</h3>
+                        <p>Create Amazon shipment plans, ensuring UPC and carton labels are applied for seamless
+                            inventory processing.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center animate__animated animate__zoomIn"
+                        style="animation-delay: 1.6s;">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Keyword Tracking</h3>
+                        <p>Monitor keyword rankings with Helium 10’s Keyword Tracker to optimize PPC and organic
+                            performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title animate__animated animate__fadeIn">Get in Touch</h2>
+            <div class="contact-form animate__animated animate__fadeInUp">
+                <div id="contact-form">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="5"
+                            placeholder="Tell me about your Amazon goals" required></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" onclick="submitForm()">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Ammad Amin Amazon VA Portfolio | Built with <i class="fas fa-heart text-danger"></i> for Amazon Sellers | <a
+                    href="#contact">Contact Me</a></p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/+923441390906?text=Hi! I'm interested in your Amazon VA services. Can we discuss my project?"
+        target="_blank" class="whatsapp-button animate__animated animate__bounceIn" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission simulation
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                alert('Thank you for your message! I’ll respond within 24 hours to discuss your Amazon goals.');
+                document.getElementById('contact-form').reset();
+            } else {
+                alert('Please fill out all fields.');
+            }
+        }
+
+        // Scroll to top functionality
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide scroll-to-top button
+        window.addEventListener('scroll', () => {
+            const scrollButton = document.querySelector('.scroll-to-top');
+            if (window.scrollY > 300) {
+                scrollButton.classList.add('show');
+            } else {
+                scrollButton.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+
+</html>
